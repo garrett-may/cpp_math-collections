@@ -39,6 +39,5 @@ float magnitude(Vec3&);
 Vec3 normalise(Vec3);
 
 std::ostream& operator << (std::ostream&, Vec3);
-std::ostream& operator << (std::ostream&, Vec3&);
 
 }

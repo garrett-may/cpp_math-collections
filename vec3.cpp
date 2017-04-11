@@ -105,12 +105,5 @@ std::ostream& operator << (std::ostream& os, Vec3 a)
 		<< "[" << a.x << "," << a.y << "," << a.z << "]";
 	return os;
 }
-
-std::ostream& operator << (std::ostream& os, Vec3& a)
-{
-	os
-		<< "[" << a.x << "," << a.y << "," << a.z << "]";
-	return os;
-}
 	
 }
