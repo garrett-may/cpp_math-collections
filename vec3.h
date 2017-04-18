@@ -16,7 +16,6 @@ public:
 	
 	Vec3();
 	Vec3(float, float, float);
-	Vec3(float);
 	
 	Vec3 operator + ();
 	Vec3 operator - ();
@@ -24,19 +23,22 @@ public:
 	float& operator [] (int);
 };
 
-Vec3 operator + (Vec3&, Vec3&);
-Vec3 operator - (Vec3&, Vec3&);
-Vec3 operator * (Vec3&, Vec3&);
-Vec3 operator / (Vec3&, Vec3&);
+Vec3 operator + (Vec3, Vec3);
+Vec3 operator - (Vec3, Vec3);
+Vec3 operator * (Vec3, Vec3);
+Vec3 operator / (Vec3, Vec3);
 
-Vec3 operator * (Vec3&, float);
-Vec3 operator * (float, Vec3&);
-Vec3 operator / (Vec3&, float);
+Vec3 operator * (Vec3, float);
+Vec3 operator * (float, Vec3);
+Vec3 operator / (Vec3, float);
 
-float dot(Vec3&, Vec3&);
-Vec3 cross(Vec3&, Vec3&);
-float magnitude(Vec3&);
+float dot(Vec3, Vec3);
+Vec3 cross(Vec3, Vec3);
+float magnitude(Vec3);
 Vec3 normalise(Vec3);
+
+Vec3 reflect(Vec3, Vec3);
+Vec3 refract(Vec3, Vec3, float);
 
 std::ostream& operator << (std::ostream&, Vec3);
 
